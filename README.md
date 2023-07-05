@@ -22,3 +22,11 @@ Use MIT License.
 ```
 
 以此类推。  
+
+***
+## 运行
+请预先安装了Python，然后尝试使用这两个命令的其中一个运行
+```
+python test.py
+python3 test.py
+```
