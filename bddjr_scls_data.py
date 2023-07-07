@@ -26,25 +26,25 @@ def list_to_data( in_array: list[str] ):
 
 #=========================================================
 
-def data_to_list( in_data: str ):
-    D = str( in_data )
+def data_to_list( in_data: str ) -> list[str]:
+    d = str( in_data )
     ret_ls = []
-    while len(D) >0:
-        Index = D.index(':')
+    while len(d) >0:
+        Index = d.index(':')
         if Index <1:
             raise 'get data error: index error'
         
         Leng = int(
-            D[ 0 : Index ] ,
+            d[ 0 : Index ] ,
             16
         )
 
         LastIndex = Index + Leng +1
 
-        ret_ls.append( D[
+        ret_ls.append( d[
             Index +1 :
             LastIndex
         ] )
 
-        D = D[ LastIndex : ]
+        d = d[ LastIndex : ]
     return ret_ls
